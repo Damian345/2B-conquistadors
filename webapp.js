@@ -218,7 +218,7 @@ function bonusCalc() {
    drillBonus += drill * 5;
    metal += drillBonus;
     var mineralBonus = 0;
-   mineralBonus += drill * 2;
+   mineralBonus += drill * 3;
    minerals += mineralBonus;
    // water filters
    var waterBonus = 0;
@@ -226,14 +226,14 @@ function bonusCalc() {
    water += waterBonus;
    // farm
    var farmBonus = 0;
-   farmBonus += farm *3;
+   farmBonus += farm *4;
    food += farmBonus;
    // bp
    var bpBonus = 0;
-   bpBonus += bp * 2;
+   bpBonus += bp * 3;
    cc += bpBonus;
    var gasBonus = 0;
-   gasBonus += gas * 2;
+   gasBonus += gas * 3;
    o2 += gasBonus ;
    update();
 }
