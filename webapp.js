@@ -10,13 +10,14 @@ var cc = 0;
 var o2 = 5;
 var mesh = 0;
 //tools
-var solar = 0;
 var gas =0;
 var drill = 0;
 var well = 0;
 var farm = 0;
 var bp = 0;
 
+
+alert("You have crashed on a planet and you need to scavenge and construct items to survive");
 
 
 window.onload = onLoadHandler;
@@ -89,7 +90,6 @@ function update() {
 	document.getElementById("minerals").value = minerals;   
 	document.getElementById("cc").value = cc;
 	document.getElementById("mesh").value = mesh;
-	document.getElementById("solar").value = solar;
 }
 
 function shop(sel) {
@@ -103,11 +103,7 @@ function shop(sel) {
 				drill++;
 				update();
 				alert("successful!");
-<<<<<<< HEAD
-				document.getElementById("image").innerHTML="<>"
-=======
 				document.getElementById("image").innerHTML="<img src=images/drill.png>"
->>>>>>> vcjhprogramming/master
 				
 				}
 			else {
@@ -138,18 +134,17 @@ function shop(sel) {
 			
 			case "Cfarm":
             alert("trying to build an AUTOMATED FARM...");
-			alert("mesh:" + mesh + " Computer chips:" + cc + " wires:" + wires + " wells:" + well + " Solar Panels:" + solar );
-			if( mesh >= 10 && cc >= 2 && wires >= 5 && well >= 1 && solar >= 1 ) {
+			alert("mesh:" + mesh + " Computer chips:" + cc + " wires:" + wires + " wells:" + well);
+			if( mesh >= 10 && cc >= 2 && wires >= 5 && well >= 1 ) {
                mesh-=10;
 				cc-=2;
-				solar-=1;
 				wires-=5;
 				farm++;
 				update();
 				alert("successful!");
 				}
 			else {
-				alert("COMPUTER: Error, 10 mesh, 2 computer chips, 1 well, 1 solar panel, and 5 wires required.");
+				alert("COMPUTER: Error, 10 mesh, 2 computer chips, 1 well, and 5 wires required.");
 			}
 			break;
 			
@@ -177,8 +172,8 @@ function shop(sel) {
 			
 			case "Cbp":
             alert("trying to build a BLUE PRINTER...");
-			alert("metal:" + metal + " wires:" + wires + " computer ships:" + cc + " Solar Panels:" +solar );
-			if( metal >= 10 && wires >= 30 && cc >= 5 && solar >=1 ) {
+			alert("metal:" + metal + " wires:" + wires + " computer ships:" + cc );
+			if( metal >= 10 && wires >= 30 && cc >= 5 ) {
                metal-=10;
 			    wires-=30;
 		 	    cc-=5;
@@ -187,7 +182,7 @@ function shop(sel) {
 				alert("successful!");
 				}
 			else {
-				alert("COMPUTER: Error, 10 metal, 20 sires, 1 solar panel, and 5 computer chips required.");
+				alert("COMPUTER: Error, 10 metal, 20 sires, and 5 computer chips required.");
 			}
 			break;
 			
@@ -199,30 +194,12 @@ function shop(sel) {
 			if( metal >= 3 && wires >=4 ) {
                metal-=3;
 			    wires-=4;
-				mesh+=2;
+				mesh++;
 				update();
 				alert("successful!");
 				}
 			else {
 				alert("COMPUTER: Error, 3 metal and 4 wires required.");
-			}
-			break;
-			
-			
-			
-			case "Csolar":
-            alert("trying to build a SOLAR PANEL...");
-			alert("metal:" + metal + " mesh:" + mesh + " wires:" + wires);
-			if( metal >= 2 && mesh >= 2 && wires >= 5 ) {
-               wires-= 5;
-				mesh-=2;
-				metal-=2;
-				solar++;
-				update();
-				alert("successful!");
-				}
-			else {
-				alert("COMPUTER: Error, 10 minerals, 3 mesh, and 1 drill required.");
 			}
 			break;
 	}
