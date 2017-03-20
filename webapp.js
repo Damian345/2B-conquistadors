@@ -20,6 +20,8 @@ var bp = 0;
 alert("You have crashed on a planet and you need to scavenge and construct items to survive");
 
 
+
+
 window.onload = onLoadHandler;
 
 function onLoadHandler() {
@@ -213,10 +215,10 @@ setInterval(function() {
 function bonusCalc() {
 	// drills
    var drillBonus = 0;
-   drillBonus += drill * 3;
+   drillBonus += drill * 5;
    metal += drillBonus;
     var mineralBonus = 0;
-   mineralBonus += drill * 1;
+   mineralBonus += drill * 2;
    minerals += mineralBonus;
    // water filters
    var waterBonus = 0;
@@ -224,14 +226,14 @@ function bonusCalc() {
    water += waterBonus;
    // farm
    var farmBonus = 0;
-   farmBonus += farm *2;
+   farmBonus += farm *3;
    food += farmBonus;
    // bp
    var bpBonus = 0;
-   bpBonus += bp * 1;
+   bpBonus += bp * 2;
    cc += bpBonus;
    var gasBonus = 0;
-   gasBonus += gas * 1;
+   gasBonus += gas * 2;
    o2 += gasBonus ;
    update();
 }
