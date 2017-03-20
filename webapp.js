@@ -103,7 +103,11 @@ function shop(sel) {
 				drill++;
 				update();
 				alert("successful!");
+<<<<<<< HEAD
 				document.getElementById("image").innerHTML="<>"
+=======
+				document.getElementById("image").innerHTML="<img src=images/drill.png>"
+>>>>>>> vcjhprogramming/master
 				
 				}
 			else {
